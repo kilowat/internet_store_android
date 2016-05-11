@@ -7,12 +7,21 @@ public class Category {
 
     private String name;
     private int image = 0;
+    private int id;
 
-    public Category(String name, int image) {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Category(int id, String name, int image) {
         this.name = name;
         this.image = image;
     }
-    public Category(String name) {
+    public Category(int id, String name) {
         this.name = name;
     }
     public String getName() {
