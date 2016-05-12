@@ -2,19 +2,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="#DDD"
+
     tools:context="pro.aliens.intenrent_store_android.fragment.DrawerFragment">
 
-    <RelativeLayout
-        android:background="#AAA"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:src="@drawable/round"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
+        android:layout_height="128dp"
+        android:background="@drawable/mt_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <ImageView
+                android:id="@+id/user_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/round" />
+
+            <TextView
+                android:textColor="#FFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_picture"
+                android:text="John Smith" />
+        </RelativeLayout>
+    </LinearLayout>
 
 
 </LinearLayout>
