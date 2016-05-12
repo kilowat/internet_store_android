@@ -1,5 +1,6 @@
 package pro.aliens.intenrent_store_android.activity;
 
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -8,17 +9,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.support.v4.app.FragmentManager;
 import pro.aliens.intenrent_store_android.R;
+import pro.aliens.intenrent_store_android.fragment.DrawerFragment;
 
 public class BaseActivity extends AppCompatActivity {
 
     protected Toolbar toolbar;
-    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
 
+        DrawerFragment drawerFragment = (DrawerFragment) getSupportFragmentManager().findFragmentById(R.id.drawer_nav_drawer_fragment);
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerFragment.setUp(R.id.drawer_nav_drawer_fragment, drawerLayout, toolbar);
     }
 
     @Override
