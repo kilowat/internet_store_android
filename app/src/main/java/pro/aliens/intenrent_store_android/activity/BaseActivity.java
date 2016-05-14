@@ -1,5 +1,6 @@
 package pro.aliens.intenrent_store_android.activity;
 
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,12 +20,9 @@ public class BaseActivity extends AppCompatActivity {
     protected DrawerLayout mDrawerLayout;
     protected ActionBarDrawerToggle mDrawerToggle;
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
+    public void setUI(){
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
-
         DrawerFragment drawerFragment = (DrawerFragment) getSupportFragmentManager().findFragmentById(R.id.drawer_nav_drawer_fragment);
         DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         setUp(R.id.drawer_nav_drawer_fragment, drawerLayout, toolbar);
@@ -41,12 +39,12 @@ public class BaseActivity extends AppCompatActivity {
 
         int id = item.getItemId();
         if (mDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
+           return true;
         }
 
         switch(id){
-            case R.id.options:
-                // TODO: 10.05.2016
+            case R.id.product_list_menu_id:
+                startActivity(new Intent(this,ProductListActivity.class));
                 break;
 
         }

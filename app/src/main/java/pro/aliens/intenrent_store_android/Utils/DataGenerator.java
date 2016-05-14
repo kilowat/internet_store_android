@@ -6,6 +6,7 @@ import pro.aliens.intenrent_store_android.R;
 import pro.aliens.intenrent_store_android.extra.PageKey;
 import pro.aliens.intenrent_store_android.model.Category;
 import pro.aliens.intenrent_store_android.model.DrawerItem;
+import pro.aliens.intenrent_store_android.model.Product;
 
 /**
  * Created by Admin on 11.05.2016.
@@ -33,5 +34,22 @@ public class DataGenerator {
         drawerItems.add(item4);
 
         return drawerItems;
+    }
+
+    public static ArrayList<Product> products(){
+        ArrayList<Product> products = new ArrayList<>();
+        products.add(new Product(0, "Наушники", R.drawable.headphone1, 200f, 0));
+        products.add(new Product(1, "akb power bank",R.drawable.akb1, 500f, 0));
+        products.add(new Product(2, "Наушники", R.drawable.headphone1, 200f, 0));
+        products.add(new Product(3, "akb power bank",R.drawable.akb1, 500f, 0));
+        products.add(new Product(4, "Наушники", R.drawable.headphone1, 200f, 0));
+        products.add(new Product(5, "akb power bank",R.drawable.akb1, 500f, 0));
+        products.add(new Product(6, "Наушники", R.drawable.headphone1, 200f, 0));
+        products.add(new Product(7, "akb power bank",R.drawable.akb1, 500f, 0));
+        products.add(new Product(8, "Наушники", R.drawable.headphone1, 200f, 0));
+        products.add(new Product(9, "akb power bank",R.drawable.akb1, 500f, 0));
+        products.add(new Product(10, "Наушники", R.drawable.headphone1, 200f, 0));
+        products.add(new Product(11, "akb power bank",R.drawable.akb1, 500f, 0));
+        return products;
     }
 }

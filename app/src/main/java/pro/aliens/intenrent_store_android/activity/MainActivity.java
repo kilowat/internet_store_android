@@ -14,13 +14,10 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        MainFragment fragment = MainFragment.instance();
-        transaction.replace(R.id.content, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+        setContentView(R.layout.activity_main);
+        setUI();
+        setSupportActionBar(toolbar);
+
     }
 
 

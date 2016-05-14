@@ -1,6 +1,7 @@
 package pro.aliens.intenrent_store_android.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -8,16 +9,18 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TableLayout;
+import android.widget.Toast;
 
 import pro.aliens.intenrent_store_android.R;
 import pro.aliens.intenrent_store_android.Utils.DataGenerator;
+import pro.aliens.intenrent_store_android.activity.ProductListActivity;
 import pro.aliens.intenrent_store_android.adapter.CategoryAdapter;
+import pro.aliens.intenrent_store_android.model.Category;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainFragment extends Fragment {
+public class MainFragment extends Fragment implements CategoryAdapter.OnCategoryClickListener {
 
     private RecyclerView categoryRecycler;
     private CategoryAdapter categoryAdapter;
@@ -39,7 +42,7 @@ public class MainFragment extends Fragment {
 
         categoryRecycler = (RecyclerView) view.findViewById(R.id.category_recycler);
         categoryAdapter = new CategoryAdapter(DataGenerator.categories(),getActivity());
-
+        categoryAdapter.setOnClickListener(this);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity(),categoryRowCount);
         categoryRecycler.setLayoutManager(layoutManager);
         categoryRecycler.setAdapter(categoryAdapter);
@@ -48,5 +51,8 @@ public class MainFragment extends Fragment {
     }
 
 
-
+    @Override
+    public void onClick(View view, Category category) {
+        startActivity(new Intent(getActivity(), ProductListActivity.class));
+    }
 }
