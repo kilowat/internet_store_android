@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <item
         android:id="@+id/product_list_menu_id"
         android:orderInCategory="100"
         android:title="product list" />
+    <item android:id="@+id/action_cart"
+        android:actionLayout="@layout/cart_count"
+        android:title=""
+        app:showAsAction="always"/>
 </menu>
