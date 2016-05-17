@@ -31,6 +31,7 @@
             tools:text="name product words" />
 
         <LinearLayout
+            android:id="@+id/price-wrapp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/product_name"
@@ -52,11 +53,11 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_below="@id/price-wrapp"
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/add_to_cart"
