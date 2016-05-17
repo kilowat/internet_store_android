@@ -49,6 +49,7 @@ public class ProductAdater extends RecyclerView.Adapter<ProductAdater.ProductVie
                 }
             }
         });
+
         return productViewHolder;
     }
 

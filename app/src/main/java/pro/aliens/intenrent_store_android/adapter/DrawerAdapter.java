@@ -64,4 +64,5 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.DrawerView
             image = (ImageView) itemView.findViewById(R.id.drawer_ico);
         }
     }
+
 }

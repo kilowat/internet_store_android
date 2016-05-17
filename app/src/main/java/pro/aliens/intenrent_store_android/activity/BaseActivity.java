@@ -50,7 +50,7 @@ public class BaseActivity extends AppCompatActivity {
 
         switch(id){
             case R.id.product_list_menu_id:
-                //setCartBage(6);
+
                 break;
 
         }
